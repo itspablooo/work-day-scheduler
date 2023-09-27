@@ -2,6 +2,11 @@ $(function () {
 
 // pull the current hour from day.js and set it to variable currentHour 
   var currentHour = dayjs().hour()
+  // get date in specified format and set to variable
+  var currentDate = dayjs().format('dddd, MMMM D')
+
+// append current date to the header p tag with id=currentDay
+$("#currentDay").append(currentDate)
 
 // when save button is clicked, run the function
   $(".saveBtn").on("click", function () { 
